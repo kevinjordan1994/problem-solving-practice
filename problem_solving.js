@@ -44,3 +44,15 @@ function maxSubarraySum(arr, num) {
 }
 
 console.log(maxSubarraySum([1, 2, 3, 4, 5], 3));
+
+function areThereDuplicates() {
+  const counter = {};
+  for (let arg of arguments) {
+    counter[arg] = (counter[arg] || 0) + 1;
+    if (counter[arg] > 1) return true;
+  }
+  return false;
+}
+
+console.log(areThereDuplicates(1, 2, 3, 4, 5));
+console.log(areThereDuplicates(1, 2, 2, 4, 5));
