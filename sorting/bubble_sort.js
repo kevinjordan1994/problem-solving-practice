@@ -59,3 +59,5 @@ module.exports = function optimizedBubbleSort(array) {
   }
   return sortedArray;
 };
+
+/*Big O Notation: Best case is O of n, Worst case is O of n squared (nested loops)*/
