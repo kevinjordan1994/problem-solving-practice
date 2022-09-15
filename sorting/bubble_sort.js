@@ -21,8 +21,6 @@ function bubbleSort(array) {
 
 module.exports = bubbleSort;
 
-console.log(bubbleSort([33, 2, 76, 1, 666, 90, 12, 13]));
-
 /*Bubble sort logic
 First, look at the first two values
 [90, 34, 56, 2, 33]
