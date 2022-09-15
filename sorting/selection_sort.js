@@ -14,6 +14,26 @@ function selectionSort(array) {
   return array;
 }
 
+function optimizedSelectionSort(array) {
+  for (let i = 0; i < array.length - 1; i++) {
+    let indexOfMin = i;
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] < array[indexOfMin]) {
+        indexOfMin = j;
+      }
+    }
+    if (indexOfMin !== i) {
+      let temp = array[i];
+      array[i] = array[indexOfMin];
+      array[indexOfMin] = temp;
+      console.log(array);
+    }
+  }
+  return array;
+}
+
+console.log(optimizedSelectionSort([0, 1, 44, 51, 23, 678, 90]));
+
 module.exports = selectionSort;
 
 /*PsudeoCode
