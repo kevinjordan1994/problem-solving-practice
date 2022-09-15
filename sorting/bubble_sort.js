@@ -2,8 +2,10 @@
 
 function bubbleSort(array) {
   let sortedArray = array;
+  //This numOfLoops variable prevents unnecessary loops.
+  let numOfLoops = array.length - 1;
   for (let i = array.length - 1; i >= 0; i--) {
-    for (let j = 0; j < array.length; j++) {
+    for (let j = 0; j < numOfLoops; j++) {
       let first = j;
       let second = j + 1;
       if (sortedArray[first] > sortedArray[second]) {
@@ -12,13 +14,14 @@ function bubbleSort(array) {
         sortedArray[second] = temp;
       }
     }
+    numOfLoops--;
   }
   return sortedArray;
 }
 
 module.exports = bubbleSort;
 
-bubbleSort([33, 2, 76, 1, 666, 90, 12, 13]);
+console.log(bubbleSort([33, 2, 76, 1, 666, 90, 12, 13]));
 
 /*Bubble sort logic
 First, look at the first two values
@@ -33,3 +36,26 @@ repeat with next two numbers and so on
 Eventually the largest number will be moved to the end
 [34, 56, 2, 33, 90]
 repeat these steps for each index in the array*/
+
+//optimized version
+
+module.exports = function optimizedBubbleSort(array) {
+  let sortedArray = array;
+  for (let i = array.length; i > 0; i--) {
+    let done = true;
+    for (let j = 0; j < i - 1; j++) {
+      let first = j;
+      let second = j + 1;
+      if (sortedArray[first] > sortedArray[second]) {
+        let temp = sortedArray[first];
+        sortedArray[first] = sortedArray[second];
+        sortedArray[second] = temp;
+        done = false;
+      }
+    }
+    if (done) {
+      return sortedArray;
+    }
+  }
+  return sortedArray;
+};
