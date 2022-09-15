@@ -1,0 +1,23 @@
+{
+  "name": "js-data-structures-and-algo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "big_o_notation.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinjordan1994/problem-solving-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinjordan1994/problem-solving-practice/issues"
+  },
+  "homepage": "https://github.com/kevinjordan1994/problem-solving-practice#readme",
+  "devDependencies": {
+    "jest": "^29.0.3"
+  }
+}
