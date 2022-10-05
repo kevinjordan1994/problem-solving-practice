@@ -118,14 +118,20 @@ class SinglyLinkedList {
   }
 
   reverse() {
+    //First swap head and tail
     const temp = this.head;
     this.head = this.tail;
     this.tail = temp;
+    //Then create two variables: one will be the previous node and the other will be the next.
     let prev = null;
     let next;
     for (let i = 0; i < this.length; i++) {
+      //The temp variable that is initialized as this.head will be used to transfer the pointers.
+      //First set next to the temp node's next
       next = temp.next;
+      //Set the temp node's next to the previous node (initially null since the head is now the tail and we don't want the tail pointing at anything)
       temp.next = prev;
+      //The next two lines are set up for the next loop iteration. We just set the previous node to the current node and the current node to the next node.
       prev = temp;
       temp = next;
     }
