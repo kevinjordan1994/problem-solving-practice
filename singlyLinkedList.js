@@ -119,7 +119,7 @@ class SinglyLinkedList {
 
   reverse() {
     //First swap head and tail
-    const temp = this.head;
+    let temp = this.head;
     this.head = this.tail;
     this.tail = temp;
     //Then create two variables: one will be the previous node and the other will be the next.
