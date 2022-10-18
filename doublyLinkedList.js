@@ -102,8 +102,9 @@ class DoublyLinkedList {
 
   set(index, value) {
     const target = this.get(index);
+    if (!target) return false;
     target.value = value;
-    return this;
+    return true;
   }
 }
 
