@@ -23,6 +23,18 @@ class Queue {
     this.length++;
     return this;
   }
+
+  shift() {
+    if (this.length === 0) return;
+    const shiftedNode = this.first;
+    this.first = shiftedNode.next;
+    shiftedNode.next = null;
+    this.length--;
+    return shiftedNode;
+  }
 }
 
 const queue = new Queue();
+queue.push(1);
+queue.push(2);
+queue.push(3);
